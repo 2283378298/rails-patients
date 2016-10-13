@@ -22,5 +22,40 @@ module Patients
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.i18n.enforce_available_locales = true
+    config.i18n.default_locale = :"zh-CN"
+    config.time_zone = 'Asia/Shanghai'
+    config.active_record.default_timezone = :local
   end
 end
+
+# ==
+
+
+#     config.i18n.default_locale = :"zh-CN"
+#     config.time_zone = 'Asia/Shanghai'
+#     config.active_record.default_timezone = :local
+#     config.autoload_paths += Dir["#{config.root}/app/models/ddb"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/error"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/oauth"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/orders"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/product"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/sale"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/stock"]
+#     config.autoload_paths += Dir["#{config.root}/app/models/suppliers"]
+
+#     config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')
+#     config.assets.precompile += [ 'forms.css']
+#     config.assets.precompile += [ 'forms.js']
+
+#     config.generators do |g|
+#       g.orm             :active_record
+#       g.template_engine :erb
+#       g.test_framework  :test_unit, fixture: false
+#       g.stylesheets     false
+#       g.javascripts     false
+#       g.jbuilder        false
+#       g.helper          false
+#     end
+#   end
+# end

@@ -24,10 +24,10 @@ class PatientsController < ApplicationController
     respond_to do |format|
       if @patient.save
         format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
-        format.json { render :show, status: :created, location: @patient }
+        # format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
+        # format.json { render json: @patient.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,6 +58,6 @@ class PatientsController < ApplicationController
     end
 
     def patient_params
-      params.require(:patient).permit(:first_name, :middle_name, :last_name, :record_num, :birth, :gender, :status, :location, :viewed_count)
+      params.require(:patient).permit(:first_name, :middle_name, :last_name, :medical_record_num, :birth, :gender, :status, :viewed_count)
     end
 end

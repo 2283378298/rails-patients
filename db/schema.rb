@@ -11,20 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011135053) do
+ActiveRecord::Schema.define(version: 20161013135057) do
+
+  create_table "locations", force: :cascade do |t|
+    t.integer  "patient_id", limit: 4
+    t.string   "code",       limit: 255
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "patients", force: :cascade do |t|
-    t.string   "first_name",   limit: 255
-    t.string   "middle_name",  limit: 255
-    t.string   "last_name",    limit: 255
-    t.integer  "record_num",   limit: 4
+    t.integer  "location_id",        limit: 4
+    t.string   "first_name",         limit: 255
+    t.string   "middle_name",        limit: 255
+    t.string   "last_name",          limit: 255
+    t.integer  "medical_record_num", limit: 4
     t.datetime "birth"
-    t.string   "gender",       limit: 255
-    t.string   "status",       limit: 255
-    t.string   "location",     limit: 255
-    t.integer  "viewed_count", limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "gender",             limit: 255
+    t.string   "status",             limit: 255
+    t.integer  "viewed_count",       limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end

@@ -1,30 +1,30 @@
 %p#notice= notice
 %p
-  %strong First name:
+  %strong= Patient.human_attribute_name(:medical_record_num) + ':'
+  = @patient.medical_record_num
+%p
+  %strong= Patient.human_attribute_name(:first_name) + ':'
   = @patient.first_name
 %p
-  %strong Middle name:
+  %strong= Patient.human_attribute_name(:middle_name) + ':'
   = @patient.middle_name
 %p
-  %strong Last name:
+  %strong= Patient.human_attribute_name(:last_name) + ':'
   = @patient.last_name
 %p
-  %strong Record num:
-  = @patient.record_num
-%p
-  %strong Birth:
+  %strong= Patient.human_attribute_name(:birth) + ':'
   = @patient.birth.strftime('%Y-%m-%d')
 %p
-  %strong Gender:
+  %strong= Patient.human_attribute_name(:gender) + ':'
   = @patient.gender
 %p
-  %strong Status:
-  = @patient.status
+  %strong= Patient.human_attribute_name(:status) + ':'
+  = @patient.status_name
 %p
-  %strong Location:
+  %strong= Patient.human_attribute_name(:location) + ':'
   = @patient.location
 %p
-  %strong Viewed count:
+  %strong= Patient.human_attribute_name(:viewed_count) + ':'
   = @patient.viewed_count
 = link_to 'Edit', edit_patient_path(@patient)
 |
