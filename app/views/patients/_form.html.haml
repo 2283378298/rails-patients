@@ -1,0 +1,11 @@
+= simple_form_for (@patient) do |f|
+  .form-inputs
+    = f.input :first_name
+    = f.input :middle_name
+    = f.input :last_name
+    = f.input :birth,as: :date
+    = f.input :gender
+    = f.input :location
+    = f.input :status
+    = f.button :submit, :class=>"btn btn-default"
+

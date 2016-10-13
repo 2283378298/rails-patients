@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %strong First name:
+  = @patient.first_name
+%p
+  %strong Middle name:
+  = @patient.middle_name
+%p
+  %strong Last name:
+  = @patient.last_name
+%p
+  %strong Record num:
+  = @patient.record_num
+%p
+  %strong Birth:
+  = @patient.birth.strftime('%Y-%m-%d')
+%p
+  %strong Gender:
+  = @patient.gender
+%p
+  %strong Status:
+  = @patient.status
+%p
+  %strong Location:
+  = @patient.location
+%p
+  %strong Viewed count:
+  = @patient.viewed_count
+= link_to 'Edit', edit_patient_path(@patient)
+|
+= link_to 'Back', patients_path

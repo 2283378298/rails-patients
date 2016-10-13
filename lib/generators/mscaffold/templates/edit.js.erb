@@ -1,0 +1,6 @@
+bootbox.hideAll();
+bootbox.dialog({
+  message: "<%%= j render partial: 'form', locals: { remote: true } %>",
+  title: "编辑<%%= tm('<%= singular_name%>')%>"
+});
+init_select2();

@@ -1,0 +1,34 @@
+%p#notice= notice
+%h1 Listing Patients
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th MR
+      %th fullname
+      %th record_num
+      %th age
+      %th gender
+      %th status
+      %th location
+      %th Viewed count
+
+  %tbody
+    - @patients.each do |patient|
+      %tr
+        %td= "MR#{patient.id}"
+        %td= patient.first_name+patient.middle_name+patient.last_name
+        %td= patient.record_num
+        %td= DateTime.now.strftime('%Y').to_i-patient.birth.strftime('%Y').to_i
+        %td= patient.gender
+        %td= patient.status
+        %td= patient.location
+        %td= patient.viewed_count
+        %th
+          = link_to '详情', patient, class: 'btn btn-info'
+          = link_to '更新', edit_patient_path(patient), class: 'btn btn-success'
+          = link_to '删除', patient, method: :delete, data: { confirm: '确定删除?' }, class: 'btn btn-danger'
+
+%br
+.row-fluid
+  = link_to 'New Patient', new_patient_path

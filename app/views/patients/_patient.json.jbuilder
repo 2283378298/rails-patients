@@ -1,0 +1,2 @@
+json.extract! patient, :id, :first_name, :middle_name, :last_name, :record_num, :birth, :gender, :status, :location, :viewed_count, :created_at, :updated_at
+json.url patient_url(patient, format: :json)

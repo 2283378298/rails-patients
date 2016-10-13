@@ -1,0 +1,17 @@
+development:
+  database: patients_development
+  adapter: mysql2
+  username: root
+  password: root
+
+test:
+  database: db/test.sqlite3
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  database: patients_production
+  adapter: mysql2
+  username: root
+  password: root
