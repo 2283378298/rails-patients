@@ -3,10 +3,10 @@
 Requirements for Patients
 
 Prerequisites:
- -Deliverables shall be implemented in Ruby on Rails > 3.2.
- -The service could use MySQL/SQLite.
- -Application shall implement unit and integration tests, as needed.
- -Tests shall be part of the deliverable.
+ - Deliverables shall be implemented in Ruby on Rails > 3.2.
+ - The service could use MySQL/SQLite.
+ - Application shall implement unit and integration tests, as needed.
+ - Tests shall be part of the deliverable.
 
 Deliverables
   - Fully functional web page for viewing patient lists and create/edit patient information.
