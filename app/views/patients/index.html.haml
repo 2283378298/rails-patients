@@ -18,7 +18,8 @@
         %td= DateTime.now.strftime('%Y').to_i-patient.birth.strftime('%Y').to_i
         %td= patient.gender
         %td= patient.status_name
-        %td= patient.location
+        %td
+          = link_to "#{patient.location}"
         %th
           = link_to '详情', patient, class: 'btn btn-info'
           = link_to '更新', edit_patient_path(patient), class: 'btn btn-success'

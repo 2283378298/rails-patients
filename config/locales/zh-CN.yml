@@ -2,7 +2,7 @@ zh-CN:
   activerecord:
     attributes:
       patient:
-        medical_record_num: MR
+        medical_record_num: 病历号
         gender: 性别
         status: 状态
         location: 位置
