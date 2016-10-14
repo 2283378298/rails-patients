@@ -1,5 +1,5 @@
 %p#notice= notice
-%h1 Listing Patients
+%h1 患者列表
 
 %table.table.table-striped
   %thead
@@ -18,8 +18,7 @@
         %td= DateTime.now.strftime('%Y').to_i-patient.birth.strftime('%Y').to_i
         %td= patient.gender
         %td= patient.status_name
-        %td
-          = link_to "#{patient.location}"
+        %td= patient.location
         %th
           = link_to '详情', patient, class: 'btn btn-info'
           = link_to '更新', edit_patient_path(patient), class: 'btn btn-success'
@@ -27,7 +26,7 @@
 
 %br
 .row-fluid
-  = link_to 'New Patient', new_patient_path
+  = link_to '新建', new_patient_path
 
   = link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN"
   = link_to "English", :controller => controller_name, :action => action_name, :locale => "en"

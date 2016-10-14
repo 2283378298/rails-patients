@@ -26,6 +26,6 @@
 %p
   %strong= Patient.human_attribute_name(:viewed_count) + ':'
   = @patient.viewed_count
-= link_to 'Edit', edit_patient_path(@patient)
+= link_to '编辑', edit_patient_path(@patient)
 |
-= link_to 'Back', patients_path
+= link_to '返回', patients_path

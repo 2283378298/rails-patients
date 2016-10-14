@@ -15,16 +15,9 @@ zh-CN:
     models:
       patient: 病人
 
-
     Show: 详情
     Edit: 编辑
     Destroy: 删除
     Back: 返回
     Save: 保存
-    Accept: 批准
-    Cancel: 关闭
-    Reject: 拒绝
 
-  patient:
-    status:
-      Referred: 开始接触

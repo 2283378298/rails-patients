@@ -7,7 +7,6 @@ class Patient < ActiveRecord::Base
   validates :middle_name, length: { maximum: 10}
   validates :last_name, presence: true, length: { maximum: 30}
   validates :status, presence: true, :inclusion => {:in => STATUS_VALUES}
-  # validates :location, presence: true
   validates :gender, presence: true
 
   def status_name

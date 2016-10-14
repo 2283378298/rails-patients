@@ -1,14 +1,9 @@
-%h1 Listing locations
-
 %table
   %thead
     %tr
       %th Patient
       %th Code
       %th Name
-      %th
-      %th
-      %th
 
   %tbody
     - @locations.each do |location|
@@ -22,4 +17,4 @@
 
 %br
 
-= link_to 'New Location', new_patient_location_path
+= link_to '新建', new_patient_location_path
